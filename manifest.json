@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "1.0",
+  "permissions": [
+    "http://localhost:3500/"
+  ],
+  "content_security_policy": "script-src 'self' http://localhost:3500; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:3500/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

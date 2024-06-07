@@ -1,0 +1,124 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Tut07Middleware</Name>
+    <RootNamespace>Tut07Middleware</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>20a834d1-7f5c-4d79-9a8f-82397de7b81f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="data\data.json" />
+    <Content Include="data\data.txt" />
+    <Content Include="logs\corsOptionslog.txt" />
+    <Content Include="logs\errlog.txt" />
+    <Content Include="logs\originlog.txt" />
+    <Content Include="logs\reglog.txt" />
+    <Content Include="logs\whitelistlog.txt" />
+    <Content Include="manifest.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="middleware\errorHandler.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="middleware\logEvents.js" />
+    <Content Include="package.json" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.css" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.json" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.min.css" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.scss" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="public\img\img1.jpg" />
+    <Content Include="README.md" />
+    <Content Include="server.js" />
+    <Content Include="views\404.html" />
+    <Content Include="views\index.html" />
+    <Content Include="views\new-page.html" />
+    <Content Include="views\subdir\index.html" />
+    <Content Include="views\subdir\test.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="logs\" />
+    <Folder Include="middleware\" />
+    <Folder Include="public\" />
+    <Folder Include="public\bootstrap\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\font\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\font\fonts\" />
+    <Folder Include="public\bootstrap\dist\" />
+    <Folder Include="public\bootstrap\dist\css\" />
+    <Folder Include="public\bootstrap\dist\js\" />
+    <Folder Include="public\img\" />
+    <Folder Include="views\" />
+    <Folder Include="views\subdir\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>
